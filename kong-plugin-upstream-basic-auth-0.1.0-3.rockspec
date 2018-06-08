@@ -2,12 +2,12 @@
 
 package = "kong-plugin-upstream-basic-auth" 
                                   
-version = "0.1.0-2"
+version = "0.1.0-3"
 
 supported_platforms = {"linux", "macosx"}
 -- LuaDist source
 source = {
-  tag = "0.1.0-2",
+  tag = "0.1.0-3",
   url = "git://github.com/LuaDist-testing/kong-plugin-upstream-basic-auth.git"
 }
 -- Original source
@@ -31,5 +31,10 @@ build = {
   modules = {
     ["kong.plugins."..pluginName..".handler"] = "kong/plugins/"..pluginName.."/handler.lua",
     ["kong.plugins."..pluginName..".schema"] = "kong/plugins/"..pluginName.."/schema.lua",
+    ["kong.plugins."..pluginName..".api"] = "kong/plugins/"..pluginName.."/api.lua",
+    ["kong.plugins."..pluginName..".daos"] = "kong/plugins/"..pluginName.."/daos.lua",
+    ["kong.plugins."..pluginName..".access"] = "kong/plugins/"..pluginName.."/access.lua",
+    ["kong.plugins."..pluginName..".migrations.cassandra"] = "kong/plugins/"..pluginName.."/migrations/cassandra.lua",
+    ["kong.plugins."..pluginName..".migrations.postgres"] = "kong/plugins/"..pluginName.."/migrations/postgres.lua",
   }
 }
