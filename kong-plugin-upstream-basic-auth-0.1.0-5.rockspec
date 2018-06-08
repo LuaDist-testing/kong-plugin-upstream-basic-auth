@@ -1,12 +1,20 @@
+-- This file was automatically generated for the LuaDist project.
+
 package = "kong-plugin-upstream-basic-auth" 
                                   
-version = "0.1.0-3"
+version = "0.1.0-5"
 
 supported_platforms = {"linux", "macosx"}
+-- LuaDist source
 source = {
-  url = "git://github.com/mvanholsteijn/kong-plugin-upstream-basic-auth",
-  tag = "v0.1.0"
+  tag = "0.1.0-5",
+  url = "git://github.com/LuaDist-testing/kong-plugin-upstream-basic-auth.git"
 }
+-- Original source
+-- source = {
+--   url = "git://github.com/mvanholsteijn/kong-plugin-upstream-basic-auth",
+--   tag = "v0.1.0-5"
+-- }
 
 description = {
   summary = "A plugin to insert basic authentication headers to the upstream.",
@@ -21,6 +29,8 @@ local pluginName = "upstream-basic-auth"
 build = {
   type = "builtin",
   modules = {
+    ["kong.plugins."..pluginName..".handler"] = "kong/plugins/"..pluginName.."/handler.lua",
+    ["kong.plugins."..pluginName..".schema"] = "kong/plugins/"..pluginName.."/schema.lua",
     ["kong.plugins."..pluginName..".api"] = "kong/plugins/"..pluginName.."/api.lua",
     ["kong.plugins."..pluginName..".daos"] = "kong/plugins/"..pluginName.."/daos.lua",
     ["kong.plugins."..pluginName..".access"] = "kong/plugins/"..pluginName.."/access.lua",
