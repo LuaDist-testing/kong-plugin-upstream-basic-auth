@@ -1,20 +1,25 @@
+-- This file was automatically generated for the LuaDist project.
+
 package = "kong-plugin-upstream-basic-auth" 
                                   
-version = "0.1.0-1"               
--- The version '0.1.0' is the source code version, the trailing '1' is the version of this rockspec.
--- whenever the source version changes, the rockspec should be reset to 1. The rockspec version is only
--- updated (incremented) when this file changes, but the source remains the same.
+version = "0.1.0-2"
 
 supported_platforms = {"linux", "macosx"}
+-- LuaDist source
 source = {
-  url = "git://github.com/mvanholsteijn/kong-plugin-upstream-basic-auth",
-  tag = "0.1.0"
+  tag = "0.1.0-2",
+  url = "git://github.com/LuaDist-testing/kong-plugin-upstream-basic-auth.git"
 }
+-- Original source
+-- source = {
+--   url = "git://github.com/mvanholsteijn/kong-plugin-upstream-basic-auth",
+--   tag = "v0.1.0"
+-- }
 
 description = {
   summary = "A plugin to insert basic authentication headers to the upstream.",
-  home = "https://github.com/mvanholsteijn/kong-plugin-upstream-basic-auth",
-  license = "MIT"
+  license = "Apache-2.0",
+  homepage = "https://github.com/mvanholsteijn/kong-plugin-upstream-basic-auth",
 }
 
 dependencies = {
